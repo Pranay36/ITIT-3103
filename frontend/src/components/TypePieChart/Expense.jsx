@@ -10,7 +10,7 @@ import { PieChart } from "../PieChart/PieChart";
 
 const Expense = ({ operations }) => {
   const [categoryAmount, setCategoryAmount] = useState([]);
-  const [sumAmout, setSumAmout] = useState();
+  const [sumAmout, setSumAmout] = useState(0);
 
   const [categories, setCategories] = useState([]);
 
