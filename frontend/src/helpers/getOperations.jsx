@@ -11,7 +11,7 @@ export const sumAmountTypes = async (type, operations) => {
     0
   );
 
-  return reduceAmount;
+  return Number(reduceAmount);
 };
 
 export const getOperation = async (type, operations) => {
