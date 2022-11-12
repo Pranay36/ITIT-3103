@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
       try {
         const { data } = await Axios(
-          "http://localhost:4000/profile",
+          "https://se-backend-monco.herokuapp.com/profile",
           checkToken(token)
         );
 
@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
 
   const loginUser = async ({ email, password }) => {
     try {
-      const { data } = await Axios.post("http://localhost:4000/login", {
+      const { data } = await Axios.post("https://se-backend-monco.herokuapp.com/login", {
         email,
         password,
       });
@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
       console.log("hh");
       console.log({ name, email, password });
       const { data } = await Axios.post(
-        "http://localhost:4000/register-users",
+        "https://se-backend-monco.herokuapp.com/register-users",
         {
           name,
           email,
@@ -109,7 +109,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const { data } = await Axios.put(
-        `http://localhost:4000/edit-profile/${values.id}`,
+        `https://se-backend-monco.herokuapp.com/edit-profile/${values.id}`,
         values,
         checkToken(token)
       );
@@ -159,7 +159,7 @@ export const AuthProvider = ({ children }) => {
   const updateBudget = async ({ id, budget }) => {
     try {
       const { data } = await Axios.put(
-        `http://localhost:4000/update-budget/${id}`,
+        `https://se-backend-monco.herokuapp.com/update-budget/${id}`,
         { budget },
         checkToken(token)
       );
